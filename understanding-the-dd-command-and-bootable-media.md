@@ -1,4 +1,4 @@
-# Understanding the `dd` Command and Bootable Media
+# Understanding the dd Command and Bootable Media
 
 ## Table of Contents
 - [What is dd?](#what-is-dd)
