@@ -20,7 +20,7 @@ Everything a frontend cannot do falls to the backend.
 
 Web communication happens via protocols. The frontend and backend communicate using protocols.
 
-The general workflow of a web application is that a frontend (client) makes a request to the backend (server) using protocols such as http, websockets, etc. The backend has handlers (methods/functions) for particular requests. When a certain request is made by the client, the handler for that particular request on the server executes, which performs the appropriate operation on that request and sends back the appropriate response, all using the relevant protocol. It is not necessary that the backend always sends a response but is the general norm.
+The general workflow of a web application is that a frontend (client) makes a request to the backend (server) using protocols such as http, websockets, etc. The backend has handlers (methods/functions) for particular requests. When a certain request is made by the client, the handler for that particular request on the server executes, which performs the appropriate operation on that request and sends back the appropriate response, all using the relevant protocol. It is not necessary that the backend always sends a response but is the general practice.
 
 Different protocols are used based on their use cases. The most used protocol is the http protocol. Http was originally meant to transfer html files and later adopted for css, images, scripts, json, etc. We can safely assume that **the web is just HTTP requests chaining off each other.**
 
@@ -40,7 +40,7 @@ Other protocols and their use cases for reference:
 | DNS resolution | DNS (over UDP) |
 | Secure shell / remote server access | SSH |
 
-## The Workflow
+## How a Web Request Travels Through a Server
 
 When you type a URL and hit enter, the browser (client) doesn't know where to send the request. So it asks DNS (Domain Name System) first.
 
@@ -92,10 +92,3 @@ Browser → DNS (Route 53) → CloudFront → Load Balancer → Security Group �
 | Your app | PM2 on VPS | PM2 on VPS | EC2 / Lambda / ECS |
 | Cost | Cheapest | Cheap + free Cloudflare tier | Expensive |
 | Complexity | Low | Low | High |
-
-> **What is PM2?**
->
-> PM2 is a process manager for Node.js applications. When your server restarts or your app crashes, PM2 automatically brings it back up. It keeps your Node.js process running in the background so you don't have to.
-
----
-
