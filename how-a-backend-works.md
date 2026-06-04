@@ -9,13 +9,13 @@ It is called a server because it serves some form of content, like documents and
 
 The frontend (your browser) has real limits. Some are hardware, some are by design:
 
-- Limited computing power
+- Limited computing power  
 Computating power on the frontend is capped by the client's hardware which might not be able to handle complex computations. A budget phone and a workstation are not the same thing.
-- Sandboxed due to security reasons
+- Sandboxed due to security reasons  
 A frontend cannot and should not be able to access the file system for obvious security reasons.
-- CORS restrictions that prevent arbitrary cross-origin requests
+- CORS restrictions that prevent arbitrary cross-origin requests  
 We will explore more about CORS in later blogs.
-- No direct access to databases
+- No direct access to databases  
 Exposing database credentials in client-side code would give anyone with DevTools raw access to your data.
 
 Everything a frontend cannot do falls to the backend.
