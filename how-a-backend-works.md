@@ -11,7 +11,9 @@ The frontend (your browser) has real limits. Some are hardware, some are by desi
 
 - Limited computing power
 - Sandboxed due to security reasons
+> A backend cannot and should not be able to access the file system.
 - CORS restrictions that prevent arbitrary cross-origin requests
+> We will explore more about CORS in later blogs.
 - No direct access to databases
 
 Everything a frontend cannot do falls to the backend.
