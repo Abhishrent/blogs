@@ -100,4 +100,4 @@ Browser → DNS (Route 53) → CloudFront → Load Balancer → Security Group �
 Here you can find the implementation of this site's backend.  
 [This site's codebase](https://github.com/Abhishrent/blog-codebase/tree/master/backend)  
 
-The understand the implementation you must go through it yourself. The repository contains a well documented readme that shows you around the codebase. I recommend cloning the repository and navigating around the different files. You can use an ai-agent to understand specific code.
+To understand the implementation you must go through it yourself. The repository contains a well documented readme that shows you around the codebase. I recommend cloning the repository and navigating around the different files. You can use an ai-agent to understand specific code.
