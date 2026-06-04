@@ -92,6 +92,6 @@ Browser → DNS (Route 53) → CloudFront → Load Balancer → Security Group �
 | Your app | PM2 on VPS | PM2 on VPS | EC2 / Lambda / ECS |
 | Cost | Cheapest | Cheap + free Cloudflare tier | Expensive |
 | Complexity | Low | Low | High |
-
-Here you can find the implementation of this site's backend.
+---
+Here you can find the implementation of this site's backend.  
 https://github.com/Abhishrent/blog-codebase
