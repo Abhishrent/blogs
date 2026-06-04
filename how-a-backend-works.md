@@ -10,11 +10,13 @@ It is called a server because it serves some form of content, like documents and
 The frontend (your browser) has real limits. Some are hardware, some are by design:
 
 - Limited computing power
+Computating power on the frontend is capped by the client's hardware which might not be able to handle complex computations. A budget phone and a workstation are not the same thing.
 - Sandboxed due to security reasons
-> A backend cannot and should not be able to access the file system.
+A frontend cannot and should not be able to access the file system for obvious security reasons.
 - CORS restrictions that prevent arbitrary cross-origin requests
-> We will explore more about CORS in later blogs.
+We will explore more about CORS in later blogs.
 - No direct access to databases
+Exposing database credentials in client-side code would give anyone with DevTools raw access to your data.
 
 Everything a frontend cannot do falls to the backend.
 
@@ -62,9 +64,9 @@ Now the browser knows where to go. It sends an HTTP request to that IP. The requ
 >
 > A port is a number that identifies a specific process or service running on a server. When a request arrives at a server's IP, the port tells the server which application should handle it. For example, HTTP traffic arrives on port 80, HTTPS on port 443, and SSH on port 22. Your Node.js app might run on port 3000. The firewall decides which ports are open to the outside world and drops everything else.
 
-Only the allowed ports pass through, that is why we need to configure the firewall to accept requests on that port. Everything else gets dropped.
+Only the allowed ports pass through, that is why we need to configure the firewall (using iptables or ufw) to accept requests on that port. Everything else gets dropped.
 
-Past the firewall, the request hits nginx (or apache as an alternative). nginx is a reverse proxy server -- it sits in front of your backend application and decides where to forward the request. It also handles SSL (for encryption), redirects, and routing.
+Past the firewall, the request hits nginx (or apache as an alternative). nginx is a reverse proxy server which sits in front of your backend application and decides where to forward the request. It also handles SSL (for encryption), redirects, and routing.
 
 nginx then forwards the request to your application running on localhost. This is the first time your actual code sees it. It processes the request, does whatever it needs to do, and sends a response back.
 
@@ -96,4 +98,4 @@ Browser → DNS (Route 53) → CloudFront → Load Balancer → Security Group �
 | Complexity | Low | Low | High |
 ---
 Here you can find the implementation of this site's backend.  
-https://github.com/Abhishrent/blog-codebase
+[This site's codebase](https://github.com/Abhishrent/blog-codebase)
