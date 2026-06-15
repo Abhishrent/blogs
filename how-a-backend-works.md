@@ -1,6 +1,6 @@
 # What is a backend?
 
-In simple terms, a backend is just a computer accessible via the public internet that serves content. In this blog we shall learn how it's made accessible, how it connects to the frontend and how a general backend is implemented. This blog's contents are supported by an actual working project made available on github at the end of this blog that shows the implementation of this very site in react and node.js.
+In simple terms, a backend is just a computer accessible via the public internet that serves content. In this blog we shall learn how it's made accessible, how it connects to the frontend and how a general backend is implemented. 
 
 **Why is it called a server?**
 It is called a server because it serves some form of content, like documents and data (html, css, json, xml), media (images, videos, audio), files (pdf, zip, executable) and streams (live video, server-sent events, websocket data).
@@ -97,8 +97,3 @@ Browser → DNS (Route 53) → CloudFront → Load Balancer → Security Group �
 | Cost | Cheapest | Cheap + free Cloudflare tier | Expensive |
 | Complexity | Low | Low | High |
 
-## Implementation
-Here you can find the implementation of this site's backend (exposing your backend code is a bad idea btw).  
-[This site's codebase](https://github.com/Abhishrent/blog-codebase/tree/master/backend)  
-
-To understand the implementation you must go through it yourself. The repository contains a well documented readme that shows you around the codebase. I recommend cloning the repository and navigating around the different files. You can use an ai-agent to understand specific code.
